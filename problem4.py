@@ -1,10 +1,10 @@
 lista = {}
 
-def function(a):
+def palindrome(a):
     return a == a[::-1]
 for i in range(999,101,-1):
     for j in range(999,i-1,-1):
-        if function(str(i*j)):
+        if palindrome(str(i*j)):
             lista[i*j] = (i,j)
             # break
 
