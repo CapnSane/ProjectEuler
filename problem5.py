@@ -57,7 +57,7 @@ def main():
     t0 = time.time()
     # 1. declarar a sequencia
     # seq = [2, 3, 4, 6, 8, 9, 16, 32]  # any sequence
-    seq = rangeF(2,100000)
+    seq = rangeF(2,20)
 
     # 2. decompor
     dec = pFactorGen(seq)
@@ -71,25 +71,3 @@ def main():
     print("Time elapsed: ", t1 - t0, "sec")
 
 main()
-
-# The answer is 232792560
-# Time elapsed:  2944.0374722480774
-
-
-# def div_list(x,start,end):
-#     for n in range(start,end+1):
-#         if x % n == 0:
-#             lista.append(n)
-#         else:
-#             pass
-
-# def minor_Number(start,end):
-#     y = 30
-#     while True:
-#         div_list(y,start,end)
-#         # print(y,lista)
-#         if lista == [i for i in range(start,end+1)]:
-#             print("The answer is", y)
-#             break
-#         lista.clear()
-#         y += 30
