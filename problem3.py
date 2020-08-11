@@ -11,7 +11,7 @@ What is the largest prime factor of the number 600851475143 ?
 lista = []
 value = 600851475143
 
-def primeFactors(n):
+def prime_factors(n):
     while n % 2 == 0:
         lista.append(2)
         n = n / 2
@@ -22,7 +22,7 @@ def primeFactors(n):
     if n > 2:
         lista.append(int(n))
 
-primeFactors(value)
+prime_factors(value)
 largest_prime = lista[-1]
 print(lista)
 print(largest_prime)

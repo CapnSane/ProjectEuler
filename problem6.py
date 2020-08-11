@@ -18,16 +18,16 @@ Find the difference between the sum of the squares of the
 first one hundred natural numbers and the square of the sum.
 '''
 
-def rangeF(start,end):
+def range_f(start,end):
     return range(start, end + 1)
 
-def sum_Squares(seq):
+def sum_squares(seq):
     sum_S = 0
     for i in seq:
         sum_S = sum_S + i**2
     return sum_S
 
-def square_Sum(seq):
+def square_sum(seq):
     sum_range = 0
     for i in seq:
         sum_range = sum_range + i
@@ -40,13 +40,13 @@ def subtrac(x1,x2):
 
 def main():
     # Range definition:
-    seq = rangeF(1,100)
+    seq = range_f(1,100)
 
     # The sum of the squares calculation:
-    sumS = sum_Squares(seq)
+    sumS = sum_squares(seq)
 
     # The square of the sum calculation:
-    squareS = square_Sum(seq)
+    squareS = square_sum(seq)
 
     # The difference between the sum of the squares and the square of the sum:
     sub = subtrac(squareS,sumS)

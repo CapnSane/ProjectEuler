@@ -11,21 +11,21 @@ divisible by all of the numbers from 1 to 20?
 
 '''
 
-def rangeF(start,end):
+def range_f(start,end):
     return range(start,end+1)
 
-def primeCheck():
-    lista2 = []
-    for num in seq:  
-        if num > 1:  
-            for i in range(2,num):  
-                if (num % i) == 0:  
-                    break  
-            else:  
-                lista2.append(num)
-    return lista2
+# def prime_check():
+#     lista2 = []
+#     for num in seq:  
+#         if num > 1:  
+#             for i in range(2,num):  
+#                 if (num % i) == 0:  
+#                     break  
+#             else:  
+#                 lista2.append(num)
+#     return lista2
 
-def primeFactors(n):
+def prime_factors(n):
     lista3 = []
     while n % 2 == 0:
         lista3.append(2)
@@ -38,10 +38,10 @@ def primeFactors(n):
         lista3.append(int(n))
     return lista3
 
-def pFactorGen(seq):
+def p_factor_gen(seq):
     lista4 = []
     for i in seq:
-        p = primeFactors(i)
+        p = prime_factors(i)
         lista4.append(p)
     return lista4
 
@@ -68,10 +68,10 @@ def main():
     t0 = time.time()
     # 1. declarar a sequencia
     # seq = [2, 3, 4, 6, 8, 9, 16, 32]  # any sequence
-    seq = rangeF(2,20)
+    seq = range_f(2,20)
 
     # 2. decompor
-    dec = pFactorGen(seq)
+    dec = p_factor_gen(seq)
 
     # 3. filtrar
     fil = filtrar(dec)
