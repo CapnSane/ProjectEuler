@@ -9,21 +9,36 @@ Find the largest palindrome made from the product of two 3-digit numbers.
 
 '''
 
-lista = {}
-
 def palindrome(a):
     return a == a[::-1]
-for i in range(999,101,-1):
-    for j in range(999,i-1,-1):
-        if palindrome(str(i*j)):
-            lista[i*j] = (i,j)
-            # break
 
-min_key = min(lista)
-max_key = max(lista)
+def product(n):
+    palindromes  = {}
+    for i in range(10**(n-1), 10**n):
+        for j in range(i, 10**n):
+            if palindrome(str(i*j)):
+                palindromes[i*j] = (i,j)
+    return palindromes
 
-print("The lowest palindrome made from the product of two 3-digit numbers is:", min_key)
-print("The two 3-digit numbers that make the lowest palindrome are:", lista[min_key])
-print("------------------------------------------------------------------------------")
-print("The largest palindrome made from the product of two 3-digit numbers is:", max_key)
-print("The two 3-digit numbers that make the largest palindrome are:", lista[max_key])
+def main():
+    # Defining the function that gives a palindrome number
+
+    # Defining n of n-digit
+    n = 3
+
+    # Defining a function that generates a list of palindromes made from the product of two 3-digit numbers
+    palindromes = product(n)
+
+    # Taking the min and max number from the list
+    min_key = min(palindromes)
+    max_key = max(palindromes)
+
+    # Printing the answer
+    print("The lowest palindrome made from the product of two 3-digit numbers is:", min_key)
+    print("The two 3-digit numbers that make the lowest palindrome are:", palindromes[min_key])
+    print("------------------------------------------------------------------------------")
+    print("The largest palindrome made from the product of two 3-digit numbers is:", max_key)
+    print("The two 3-digit numbers that make the largest palindrome are:", palindromes[max_key])
+    print("\n The answer is", max_key)
+
+main()
