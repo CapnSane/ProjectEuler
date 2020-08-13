@@ -1,4 +1,3 @@
-import math
 '''
 Problem 3
 
@@ -8,10 +7,9 @@ What is the largest prime factor of the number 600851475143 ?
 
 '''
 
-lista = []
-value = 600851475143
+import math
 
-def prime_factors(n):
+def prime_factors(n,lista):
     while n % 2 == 0:
         lista.append(2)
         n = n / 2
@@ -22,8 +20,21 @@ def prime_factors(n):
     if n > 2:
         lista.append(int(n))
 
-prime_factors(value)
-largest_prime = lista[-1]
-print(lista)
-print(largest_prime)
+def main():
+    # Defining the value given by the problem
+    value = 600851475143
 
+    # Generating the list of prime factors
+    lista = []
+    prime_factors(value,lista)
+
+    # Getting the largest prime factor of the given value from the list
+    largest_prime = lista[-1]
+
+    # Printing the list
+    print(lista)
+
+    # Printing the answer (largest prime factor of the given value)
+    print(largest_prime)
+
+main()

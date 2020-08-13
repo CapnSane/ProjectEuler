@@ -1,5 +1,3 @@
-import time
-
 '''
 Problem 9
 
@@ -13,6 +11,8 @@ There exists exactly one Pythagorean triplet for which a + b + c = 1000.
 Find the product abc.
 
 '''
+
+import time
 
 def list_gen(last):
     triplet = [[a, b, c] for a in range(1,last-1)

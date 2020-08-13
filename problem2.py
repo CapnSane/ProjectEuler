@@ -13,9 +13,7 @@ find the sum of the even-valued terms.
 
 """
 
-seq = [0,1]
-
-def fibo(lim):
+def fibo(lim,seq):
     i = 1
     while seq[i] < lim:
         if seq[i-1] > lim - seq[i]:
@@ -27,5 +25,19 @@ def fibo(lim):
     seq.remove(seq[1])
     return sum(i for i in seq if i % 2 == 0)
 
-print("A sequência de Fibonacci até o número limite é:")
-print(seq, "\nA soma dos termos pares é:\n", fibo(4000000))
+# print("A sequência de Fibonacci até o número limite é:")
+# print(seq, "\nA soma dos termos pares é:\n", fibo(4000000))
+
+def main():
+    # Defining the limit
+    limit = 4000000
+
+    # Building and printing the Fibonacci sequence
+    seq = [0,1]
+    fiboseq = fibo(limit,seq)
+    print("The Fibonacci sequence whose values do not exceed", limit,"is:\n", seq)
+
+    # Printing the sum of the even-valued terms
+    print("\nThe sum of the even-valued terms is:\n", fiboseq)
+
+main()

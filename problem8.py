@@ -32,7 +32,6 @@ What is the value of this product?
 
 '''
 
-
 def list_gen(n,number):
     number_list = []
     number_list = ([number[i:i+n] for i in range(0, len(number))])

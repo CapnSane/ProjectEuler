@@ -1,5 +1,3 @@
-import time
-
 '''
 Problem 5
 
@@ -11,8 +9,9 @@ divisible by all of the numbers from 1 to 20?
 
 '''
 
-def range_f(start,end):
-    return range(start,end+1)
+import time
+
+## If I need someday of this function
 
 # def prime_check():
 #     lista2 = []
@@ -24,6 +23,9 @@ def range_f(start,end):
 #             else:  
 #                 lista2.append(num)
 #     return lista2
+
+def range_f(start,end):
+    return range(start,end+1)
 
 def prime_factors(n):
     lista3 = []
