@@ -68,17 +68,17 @@ def product(fil):
 
 def main():
     t0 = time.time()
-    # 1. declarar a sequencia
+    # 1. Defining the sequence
     # seq = [2, 3, 4, 6, 8, 9, 16, 32]  # any sequence
-    seq = range_f(2,20)
+    seq = range_f(2,20) # sequence from the problem statement
 
-    # 2. decompor
+    # 2. Decomposition
     dec = p_factor_gen(seq)
 
-    # 3. filtrar
+    # 3. Filter
     fil = filtrar(dec)
 
-    # 4. Calcular a multiplicacao
+    # 4. Calculation of the product
     print(product(fil))
     t1 = time.time()
     print("Time elapsed: ", t1 - t0, "sec")

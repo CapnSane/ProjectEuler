@@ -16,8 +16,8 @@ import time
 
 def list_gen(last):
     triplet = [[a, b, c] for a in range(1,last-1)
-            for b in range(1,last)
-            for c in range(1,last+1) if a != b and a != c and b != c and a < b and b < c] 
+    for b in range(1,last)
+        for c in range(1,last+1) if a != b and a != c and b != c and a < b and b < c] 
     return triplet
 
 def conditions(lista,total):
