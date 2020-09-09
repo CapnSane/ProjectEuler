@@ -21,7 +21,6 @@ def list_gen(last):
     return triplet
 
 def conditions(lista,total):
-    new = []
     for i in range(len(lista) + 1):
         if (lista[i][0] + lista[i][1] + lista[i][2]) == total and (lista[i][0]**2 + lista[i][1]**2) == lista[i][2]**2:
             return lista[i]
