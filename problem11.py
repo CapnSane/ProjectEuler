@@ -28,7 +28,8 @@ have been marked in red.
 The product of these numbers is 26 × 63 × 78 × 14 = 1788696.
 
 What is the greatest product of four adjacent numbers in the
-same direction (up, down, left, right, or diagonally) in the 20×20 grid?
+same direction (up, down, left, right, or diagonally) in the
+20×20 grid?
 
 '''
 def diagonal_l(matrix):
@@ -37,9 +38,6 @@ def diagonal_l(matrix):
         for y in range(3,len(matrix)):
             product0 =  matrix[x][y]*matrix[x+1][y-1]*matrix[x+2][y-2]*matrix[x+3][y-3] # Diagonal left
             lista0.append(product0)
-    #         sublista2 =  [[x, y], [x, y-1], [x, y-2], [x, y-3]] # Test
-    #         lista0.append(sublista2)
-    # print("indices", lista0)
     return lista0
 
 def diagonal_r(matrix):
@@ -69,16 +67,6 @@ def vertical(matrix):
 
 def main():
     # Defining the matrix
-    
-    ## Test
-    # matrix = [
-    #     [1,2,3,4,5],
-    #     [2,3,4,5,6],
-    #     [3,4,5,6,7],
-    #     [4,5,6,7,8],
-    #     [5,6,7,8,9]
-    # ]
-
     matrix = [
     [8, 2, 22, 97, 38, 15, 00, 40, 00, 75, 4, 5, 7, 78, 52, 12, 50, 77, 91, 8],
     [49, 49, 99, 40, 17, 81, 18, 57, 60, 87, 17, 40, 98, 43, 69, 48, 4, 56, 62, 00],
