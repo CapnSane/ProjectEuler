@@ -1,2 +1,7 @@
 .vscode/
 bash.exe.stackdump
+arquivo_de_testes.py
+decoder_b64.py
+encoder_b64.py
+encoding.py
+primeList.py
