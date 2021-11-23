@@ -33,4 +33,16 @@ def collatz(start):
         i += 1
   return i
 
-print(collatz(13))
+def compare(num):
+  x = 0
+  i = 1
+  save = 0
+  for i in range(1, num, 1):
+    if collatz(i) > save:
+      save = collatz(i)
+      x = i
+    else:
+      pass
+  return x
+
+print(compare(1000000))
