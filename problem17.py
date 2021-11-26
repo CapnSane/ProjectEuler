@@ -18,10 +18,10 @@ from num2words import num2words
 x = 42
 
 n = 1
-max = 1000
+nummax = 1000
 newword = ""
 
-for i in range(n, max + 1, 1):
+for i in range(n, nummax + 1, 1):
   word = num2words(i)
   newword += word
 
