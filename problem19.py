@@ -17,3 +17,18 @@ How many Sundays fell on the first of the month during the twentieth century (1 
 
 
 '''
+
+year = 365
+yearbi = 366
+
+listy = []
+listbi = []
+
+for i in range(1901, 2001):
+  if i % 4 == 0:
+    listbi.append(i)
+  else:
+    listy.append(i)
+
+# print(listbi)
+# print(listy)
