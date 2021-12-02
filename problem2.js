@@ -10,8 +10,8 @@
 // whose values do not exceed four million,
 // find the sum of the even-valued terms.
 
-let lim = 4000000;
-let seq = [1, 2];
+const lim = 4000000;
+const seq = [1, 2];
 
 function fibo(lim, seq) {
   let i = 1;
