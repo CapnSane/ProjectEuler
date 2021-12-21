@@ -7,33 +7,39 @@
 // divisible by all of the numbers from 1 to 20?
 
 const n = 20;
+const x = listGen(n);
 
-function divisible() {
-  for (let j = n + 1; j < 1000000000; j++) {
-    if (
-      j % 2 == 0 &&
-      j % 3 == 0 &&
-      j % 4 == 0 &&
-      j % 5 == 0 &&
-      j % 6 == 0 &&
-      j % 7 == 0 &&
-      j % 8 == 0 &&
-      j % 9 == 0 &&
-      j % 10 == 0 &&
-      j % 11 == 0 &&
-      j % 12 == 0 &&
-      j % 13 == 0 &&
-      j % 14 == 0 &&
-      j % 15 == 0 &&
-      j % 16 == 0 &&
-      j % 17 == 0 &&
-      j % 18 == 0 &&
-      j % 19 == 0 &&
-      j % 20 == 0
-    ) {
-      console.log(j);
-      break;
-    }
+function listGen(n) {
+  const x = [];
+  for (let i = 1; i <= n; i++) {
+    x.push(i);
   }
+  return x;
 }
-divisible();
+
+function smallestCommons(x) {
+  var max = Math.max(...x);
+  var min = Math.min(...x);
+  var candidate = max;
+
+  var smallestCommon = function (low, high) {
+    function scm(l, h) {
+      if (h % l === 0) {
+        return h;
+      } else {
+        return scm(l, h + high);
+      }
+    }
+    return scm(low, high);
+  };
+
+  for (var i = min; i <= max; i += 1) {
+    candidate = smallestCommon(i, candidate);
+  }
+
+  return candidate;
+}
+
+let result = smallestCommons(x);
+
+console.log(result);
