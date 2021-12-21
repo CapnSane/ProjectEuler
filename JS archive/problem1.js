@@ -5,12 +5,12 @@
 
 // Find the sum of all the multiples of 3 or 5 below 1000.
 
-function multiples(range=1000) {
-  let list = []
+function multiples(range = 1000) {
+  let list = [];
   for (let i = 0; i < range; i++) {
-    if (i%3==0 || i%5==0) {
-      list.push(i)
-    };
+    if (i % 3 == 0 || i % 5 == 0) {
+      list.push(i);
+    }
   }
   console.log(list.reduce((a, b) => a + b));
 }
